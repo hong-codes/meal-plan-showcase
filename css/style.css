@@ -1,0 +1,104 @@
+/* Box Model Hack
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Clear fix hack */
+  .clearfix:after {
+       content: ".";
+       display: block;
+       clear: both;
+       visibility: hidden;
+       line-height: 0;
+       height: 0;
+  }
+  
+  .clear {
+      clear: both;
+  }
+  
+  html, body {
+    height: 100%;
+    max-width: 1100px;
+  }
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #bddc67;
+    padding: 1em 0;
+}
+
+.nav_list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.nav_item {
+    margin-right: 1em;
+}
+
+.nav_link {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+body {
+    font-family: "sans-serif";
+    width: auto;
+    font-size: 1.3rem;
+}
+
+.hero {
+    height: 300px;
+    max-width: auto;
+    border: 2px solid red;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    opacity: 70%;
+    /* background-size: auto; */
+}
+
+.main {
+    border: 2px solid blue;
+    height: 300px;
+    text-align: center;
+    /* display: flex; */
+}
+
+h1 {
+    font-size: 3rem;
+    color: blue;
+    margin: 10px;
+}
+
+h2 {
+    color: green;
+    padding: 0.5 rem;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #23424a;
+    font-weight: 900;
+    background-color: #38cfd9;
+    padding: 0.75em 2em;
+    border-radius: 100px;
+}
+
+h6 {
+    text-align: center;
+}
