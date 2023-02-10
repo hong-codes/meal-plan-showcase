@@ -37,25 +37,38 @@
     </section>
 
     <section>
-        <h1>Meal Plan API</h1>
-        <p>Please use localhost:8000/api/meal-plan</p>
+        <h1>Not sure what to cook today?</h1>
+        <h1>Have some ingredients, but don't know what to cook with it?</h1>
     </section>
 
     <section class="main">
-            <h1>Not sure what to cook today?</h1>
-            <h2>We got you!</h2>
-            <!-- <a href= "#" class="button">Click here to get a random recipe.</a> -->
+        <h1>We got you!</h1>
+        <section class="randomRecipe">
+            <h2>Recipe Idea</h2>
             <button type="button" name="button">Click here!!</button>
-            <h3></h3>
-            <img class="recipeImg" src="">
-            <p class="recipeInstr"></p>
+            <section class = "recipeBox">
+                <section class="recipeLeft">
+                    <h3 class="recipeName"></h3>
+                    <img class="recipeImg" src="">
+                    <h4 id="ingTitle" class="hidden">Ingredients</h4>
+                    <p class="recipeIng"></p>
+                </section>
+                <section class="recipeRight">
+                    <h4 id="instrTitle" class="hidden">Instructions</h4>
+                    <p class="recipeInstr"></p>
+                </section>
+            </section>
 
-        <!-- <section class="recipe-card">
-            <h2>Name</h2>
-			<img class="recipeImg" src="" alt="">
+        </section>
+
+        <!-- <section class="recipeByIngredient">
+            <h2>Test - enter ingredient</h2>
+            <input type="text" name="" value="">
+			<img class="test-recipeImg" src="" alt="">
+            <button class="test-button" type="button" name="button">Click here!!</button>
 			<h3>Instructions</h3>
-        </section> -->
-            
+        </section>
+             -->
     </section>
     
     <script type="text/javascript" src="main.js"></script>

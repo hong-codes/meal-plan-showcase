@@ -57,7 +57,7 @@ body {
 }
 
 .hero {
-    height: 300px;
+    height: 100px;
     max-width: auto;
     border: 2px solid red;
 }
@@ -65,14 +65,15 @@ body {
 img {
     width: 100%;
     object-fit: cover;
-    height: 300px;
+    height: 100px;
     opacity: 70%;
     /* background-size: auto; */
 }
 
+/* BODY */
 .main {
     border: 2px solid blue;
-    height: 900px;
+    height: auto;
     text-align: center;
     /* display: flex; */
 }
@@ -104,5 +105,29 @@ h6 {
 }
 
 .recipeImg {
-    object-fit: none;
+    object-fit: contain;
+    /* max-width: 50%; */
+    height: 150px;
+}
+
+.recipeBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section .recipeLeft {
+    width: 40%;
+    height: auto;
+    align-self: flex-start;
+}
+
+section .recipeRight {
+    width: 60%;
+    height: auto;
+    align-self: flex-start;
+}
+
+.hidden{
+	display: none;
 }
