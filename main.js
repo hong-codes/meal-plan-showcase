@@ -1,3 +1,10 @@
+// Current Issues
+// 1. light box showing where the img is showing, where is this comming from?
+// 2. any items appended, don't get deleted when button is clicked. How to clear this?
+
+// CURRENTLY WORKING ON
+// 1. adding multiple ingredients to meals
+
 // This function is for grabbing a random recipe when user clicks on "Random Recipe button"
 document.querySelector('button').addEventListener('click', getRandomRecipe)
 
@@ -8,20 +15,39 @@ function getRandomRecipe(){
     console.log(data.meals[0].strMeal)
     document.querySelector('.recipeName').innerText = data.meals[0].strMeal
     document.querySelector('.recipeImg').src = data.meals[0].strMealThumb
-    document.querySelector('.recipeIng').innerText = data.meals[0].strIngredient1
     document.querySelector('.recipeInstr').innerText = data.meals[0].strInstructions
-    document.querySelector('#ingTitle').classList.toggle('hidden')
-    document.querySelector('#instrTitle').classList.toggle('hidden')
+    document.querySelector('#instrTitle').innerText = "Instructions"
+    document.querySelector('#ingTitle').innerText = "Ingredients"
 
-    // add list of recipe ingredients
+    // clear previous searches
+    let mealIngredients = document.getElementById("recipeIng");
+    mealIngredients.innerHTML = ""; 
+
+    // checklist of ingredients
+    for (let i = 1; i <= 20; i++) {
+      // checks if length is greater than 0
+      if(data.meals[0][`strIngredient${i}`].length){
+
+        let checkbox = document.createElement('input')
+        checkbox.type = "checkbox";
+        checkbox.name = "name";
+        checkbox.value = "value";
+        checkbox.id = "id";
+
+        var label = document.createElement('label')
+        label.htmlFor = "id";
+
+        label.appendChild(checkbox);
+        label.appendChild(document.createTextNode(data.meals[0][`strMeasure${i}`] + " " + data.meals[0][`strIngredient${i}`]));
+        mealIngredients.appendChild(label);
+      }
+    }
 
   })
   .catch(err => {
     console.log(`error${err}`)
   })
 }
-
-
 
 
 // This function is for grabbing the recipes user enters into the form. Create a form
